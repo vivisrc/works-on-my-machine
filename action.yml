@@ -1,0 +1,15 @@
+name: works on my machine
+description: posts a "works on my machine" sticker on every issue created and then closes them
+author: vivi
+inputs:
+  token:
+    description: token to use when authenticating
+    required: false
+    default: ${{ github.token }}
+  close:
+    description: should the issue be closed after posting the image?
+    required: false
+    default: true
+runs:
+  using: node16
+  main: dist/index.js

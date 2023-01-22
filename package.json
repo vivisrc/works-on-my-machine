@@ -1,0 +1,29 @@
+{
+  "name": "works-on-my-machine",
+  "version": "0.0.0",
+  "private": true,
+  "description": "works on my machine",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write 'src/**/*.ts'",
+    "format-check": "prettier --check 'src/**/*.ts'",
+    "package": "ncc build --source-map --license licenses.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivisrc/works-on-my-machine.git"
+  },
+  "license": "Zlib",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "@octokit/webhooks-definitions": "^3.67.3"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.0",
+    "@vercel/ncc": "^0.36.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.9.4"
+  }
+}
